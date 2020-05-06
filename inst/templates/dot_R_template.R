@@ -6,7 +6,8 @@
 # -----------------------------------------------------------------------------#
 rm(list = ls())
 
-library(tidyverse)
+library(dplyr)
+# library(Useful2me)   # remotes::install_github("Rundmus/Useful2me-R_package")
 
 #----- File names --------------------------------------------------------------
 
@@ -20,6 +21,5 @@ fn <- list(
 #  Check all exists
 stopifnot(all(file.exists(c('.', unlist(fn$i)))), 
           all(file.exists(dirname(c('.', unlist(fn$o))))))
-
 
 #----- MAIN --------------------------------------------------------------------
