@@ -18,6 +18,7 @@
 #' 
 #' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{rgb}}
+#' @importFrom grDevices rgb col2rgb
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2017-02-07 by Mun-Gwan

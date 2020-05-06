@@ -6,7 +6,9 @@ Author@R: c(person("Mun-Gwan", "Developer", email= "mungwan@gmail.com"))
 Author: Mun-Gwan Hong
 Maintainer: Mun-Gwan Hong <mungwan@gmail.com>
 Imports:
-	tidyverse,
+	dplyr,
+	ggplot2,
+  scales,
 	readxl,
   english
 Description: A collection of R functions that are useful to me, and potentially useful to you.

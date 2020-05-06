@@ -11,7 +11,6 @@
 #' @author Mun-Gwan Hong <\email{mun-gwan.hong@scilifelab.se}>
 #' @seealso
 #' \code{\link{read_excel}}
-#' @import tidyverse
 #' @importFrom readxl read_excel
 #' @export
 # -----------------------------------------------------------------------------#

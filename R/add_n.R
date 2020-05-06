@@ -14,6 +14,7 @@
 #'   geom_boxplot() + 
 #'   add_n()
 #' 
+#' @importFrom ggplot2 position_dodge stat_summary
 #' @export
 # -----------------------------------------------------------------------------#
 add_n <- function(

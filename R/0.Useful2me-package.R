@@ -8,7 +8,8 @@
 #' @docType package
 #' 
 #' @name Useful2me-package
-#' @import tidyverse
+#' @import dplyr
+#' @import ggplot2
 #' 
 NULL
 

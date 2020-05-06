@@ -13,6 +13,9 @@
 #' 
 #' @seealso
 #' \code{\link{geom_violin}}
+#' 
+#' @import ggplot2
+#' @importFrom scales zero_range
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2018-09-12 by Mun-Gwan
@@ -41,7 +44,7 @@ geom_split_violin <- function(mapping = NULL,
         )
       grp <- data[1, "group"]
       newdata <-
-        plyr::arrange(transform(data, x = if (grp %% 2 == 1)
+        dplyr::arrange(transform(data, x = if (grp %% 2 == 1)
           xminv
           else
             xmaxv), if (grp %% 2 == 1)
