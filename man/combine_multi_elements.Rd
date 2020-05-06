@@ -4,8 +4,13 @@
 \alias{combine_multi_elements}
 \title{Combine multiple elements}
 \usage{
-combine_multi_elements(x, sep = ",", numeric_FUN = mean,
-  logical_FUN = all, na.rm = T)
+combine_multi_elements(
+  x,
+  sep = ",",
+  numeric_FUN = mean,
+  logical_FUN = all,
+  na.rm = T
+)
 }
 \arguments{
 \item{x}{a vector of a class}
@@ -28,5 +33,5 @@ a vector of same class as \var{x}
 Combine multiple elements taking the class into account
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

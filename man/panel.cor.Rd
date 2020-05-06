@@ -24,5 +24,5 @@ value are. This is designed to use with \code{\link{pairs}} as \cr
 \code{\link{pairs}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

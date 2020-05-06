@@ -5,19 +5,17 @@
 #' 
 #' @param file The name of the generating .R file. The ".R" extension will be
 #'   added if it is missing.
+#' @param author The author of the script
 #' @param title The title of the generating R script, which is displayed at the
 #'   top
-#' @param author The author of the script
 #' @param date The date written as the creation date
-#' @param wddir The directory on which the R script should be run.
 #' 
 #' @examples
 #' \dontrun{
 #' use.R_template("process_data") 
 #' }
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
-#' @importFrom whisker whisker.render
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2017-03-02 by Mun-Gwan
@@ -25,24 +23,28 @@
 # -----------------------------------------------------------------------------#
 
 use.R_template <- function(file, 
+                           author, 
                            title= sub("\\.R$", "", basename(file)), 
-                           author= "Mun-Gwan", 
-                           date= Sys.Date(), 
-                           wddir= getwd()
+                           date= Sys.Date()
 ) {
+  stopifnot(
+    !missing(file), 
+    !missing(author),
+    is.character(title)
+  )
+  
   #  template_path = path to the template file
   template_path <- system.file("templates", "dot_R_template.R", 
-                               package= "Useful4me", 
+                               package= "Useful2me", 
                                mustWork= TRUE)
-  
-  #  abbreviate user home directory to "~"
-  wddir <- sub(paste0("^", path.expand("~")), "~", wddir)
   
   ##  Substitute the entities in the templates with the given values in this
   ##  function
-  data_in <- list(title= title, author= author, date= date, wddir= wddir)
-  out_text <- whisker::whisker.render(readLines(template_path), data= data_in)
-  
+  out_text <- readLines(template_path) %>% 
+    gsub('\\{\\{\\{ title \\}\\}\\}', title, .) %>% 
+    gsub('\\{\\{\\{ author \\}\\}\\}', author, .) %>% 
+    gsub('\\{\\{\\{ date \\}\\}\\}', as.character(date), .) 
+
   ##  allow both with or without .R in 'file'
   base_fn <- sub("\\.R$", "", basename(file))
   path <- file.path(dirname(file), paste0(base_fn, ".R"))

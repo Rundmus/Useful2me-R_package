@@ -10,7 +10,7 @@
 #' 
 #' @param x,size,replace,prob same as \code{\link{sample}}
 #' @return a vector
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{sample}}
 #' @export
 # -----------------------------------------------------------------------------#

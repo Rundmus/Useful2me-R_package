@@ -35,5 +35,5 @@ This is a code for swift switch between \code{ask_save_plot} and
          \code{\link{jpeg}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

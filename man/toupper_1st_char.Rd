@@ -16,5 +16,5 @@ a string vector
 Capitalize the first character only
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

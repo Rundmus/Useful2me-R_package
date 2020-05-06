@@ -1,37 +1,17 @@
-Package: Useful4me
-Version: 0.32
-Date: 2017-12-13
-Title: R function collection useful for me
-Author@R: c(person("Mun-Gwan", "Developer", email= "mun-gwan.hong@scilifelab.se"))
+Package: Useful2me
+Version: 0.1
+Date: 2020-05-06
+Title: R function collection useful to me
+Author@R: c(person("Mun-Gwan", "Developer", email= "mungwan@gmail.com"))
 Author: Mun-Gwan Hong
-Maintainer: Mun-Gwan Hong <mun-gwan.hong@scilifelab.se>
+Maintainer: Mun-Gwan Hong <mungwan@gmail.com>
 Imports:
-	beeswarm,
- 	dplyr,
- 	whisker,
-	tibble
-Description: This package includes a mixture of functions can be useful to me.
-License: GPL-3
+	tidyverse
+Description: A collection of R functions that are useful to me, and potentially useful to you.
+License: MIT-license
 LazyLoad: yes
 TO-DO: 
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
 Collate: 
-    '0.Useful4me-package.R'
-    'ask_save_plot.R'
-    'asks.R'
-    'boxplot_beeswarm.R'
-    'overwrite_par.R'
-    'boxplot_nEle.R'
-    'lighten_color.R'
-    'mergeToX_1.0.R'
-    'names_by.R'
-    'panel.cor.R'
-    'plot_lm.R'
-    'plot_untils.R'
-    'qqplot_log10P.R'
-    'shuffle.R'
-    'source_log.R'
-    'string_utils.R'
-    'unwhich.R'
-    'use.R_template.R'
 Suggests: testthat
+Encoding: UTF-8

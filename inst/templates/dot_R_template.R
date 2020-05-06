@@ -1,15 +1,25 @@
 # -----------------------------------------------------------------------------#
 # {{{ title }}}
 # -----------------------------------------------------------------------------#
-# Package required : tidyverse
-# Data required: 
-# Data created :
-#
 # created  : {{{ date }}} by {{{ author }}}
 # modified : 
 # -----------------------------------------------------------------------------#
-
-try(setwd("{{{ wddir }}}"), silent= T)
-rm(list= ls(all.names= TRUE))
+rm(list = ls())
 
 library(tidyverse)
+
+#----- File names --------------------------------------------------------------
+
+fn <- list(
+  i = list(                               #  input
+  ),
+  o = list(                               #  output
+  )
+)
+
+#  Check all exists
+stopifnot(all(file.exists(c('.', unlist(fn$i)))), 
+          all(file.exists(dirname(c('.', unlist(fn$o))))))
+
+
+#----- MAIN --------------------------------------------------------------------

@@ -7,7 +7,7 @@
 #' @param ...,list,file Please refer to the description in \code{\link{save}}
 #' @param yes for running in a script. If 'yes' is TRUE, then 'FUN' will be 
 #'   excuted without asking
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{save}}
 #' 
 #' @export
@@ -56,7 +56,7 @@ ask_save <- function(...,
 #' @param yes for running in a script. If 'yes' is TRUE, then 'FUN' will be 
 #'   excuted without asking
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{write.table}}
 #' 
 #' @importFrom utils write.table
@@ -110,7 +110,7 @@ ask_write.table <- function(x,
 #' @return if 'y' was given for the question, then output of \code{FUN}.
 #'   Otherwise, \code{NULL} will be returned.
 #'   
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2012-04-25 by Mun-Gwan

@@ -27,5 +27,5 @@ overwrite_par(prev_par, new_par)
 
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

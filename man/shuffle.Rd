@@ -25,5 +25,5 @@ sampling of 1:(the value) of the \code{sample}.
 \code{\link{sample}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

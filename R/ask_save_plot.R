@@ -11,7 +11,7 @@
 #'   file format can be used.
 #' @param FUN the function that make one or more plots
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{png}}, \code{\link{pdf}}, \code{\link{tiff}}, 
 #'          \code{\link{jpeg}}
 #' 

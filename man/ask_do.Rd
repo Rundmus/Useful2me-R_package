@@ -23,5 +23,5 @@ Ask first and run the \code{FUN} to avoid any unwanted automatic action in
 a script.
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

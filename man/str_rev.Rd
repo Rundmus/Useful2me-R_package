@@ -21,5 +21,5 @@ str_rev(c("Sample1", "Sample2"))
 
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

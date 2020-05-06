@@ -25,5 +25,5 @@ concatenate_skip_overlap(c("Sample1", "Sample2", "Sample13"))
 
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

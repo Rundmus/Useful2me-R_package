@@ -4,8 +4,14 @@
 \alias{mergeToX}
 \title{merge x and y, leaving x intact}
 \usage{
-mergeToX(x, y, by = intersect(names(x), names(y)), by.x = by, by.y = by,
-  suffix.y = ".y")
+mergeToX(
+  x,
+  y,
+  by = intersect(names(x), names(y)),
+  by.x = by,
+  by.y = by,
+  suffix.y = ".y"
+)
 }
 \arguments{
 \item{x, y}{data frames to be merged, in which 'x' will not be changed at all}
@@ -38,5 +44,5 @@ mergeToX(tg1, tg2, by= rownames)
 \code{\link{merge}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

@@ -21,5 +21,5 @@ added to make the names clearer. This uses a fairly large part of the code of
 \code{\link{by}}, \code{\link{names}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

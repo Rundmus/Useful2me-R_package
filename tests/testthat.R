@@ -1,4 +1,4 @@
 library(testthat)
-library(Useful4me)
+library(Useful2me)
 
-test_check("Useful4me")
+test_check("Useful2me")

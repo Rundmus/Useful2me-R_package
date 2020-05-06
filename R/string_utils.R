@@ -6,7 +6,7 @@
 #' @param x a string vector
 #' @return a string vector
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2016-10-18 by Mun-Gwan
@@ -31,7 +31,7 @@ toupper_1st_char <- function(x) {
 #' @examples 
 #' str_rev(c("Sample1", "Sample2"))
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2017-09-12 by Mun-Gwan
@@ -60,7 +60,7 @@ str_rev <- function(x) {
 #' @examples 
 #' concatenate_skip_overlap(c("Sample1", "Sample2", "Sample13"))
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 #
@@ -117,7 +117,7 @@ concatenate_skip_overlap <- function(x,
 #' @param na.rm if NA is removed
 #' @return a vector of same class as \var{x}
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # required : concatenate_skip_overlap

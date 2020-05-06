@@ -4,9 +4,18 @@
 \alias{ask_write.table}
 \title{Ask first and write a table}
 \usage{
-ask_write.table(x, file = stop("'file' must be specified"), quote = FALSE,
-  sep = "\\t", na = "", row.names = FALSE, col.names = if (row.names ==
-  TRUE) NA else TRUE, ..., sortBy, yes = FALSE)
+ask_write.table(
+  x,
+  file = stop("'file' must be specified"),
+  quote = FALSE,
+  sep = "\\t",
+  na = "",
+  row.names = FALSE,
+  col.names = if (row.names == TRUE) NA else TRUE,
+  ...,
+  sortBy,
+  yes = FALSE
+)
 }
 \arguments{
 \item{x, file, quote, sep, na, row.names, col.names, ...}{Please refer to the 
@@ -25,5 +34,5 @@ automatic action in a script.
 \code{\link{write.table}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

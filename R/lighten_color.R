@@ -16,7 +16,7 @@
 #' @examples 
 #' lighten_color(c("green4", 8, 1, "black", "#6464FF", "blue"))
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{rgb}}
 #' @export
 # -----------------------------------------------------------------------------#

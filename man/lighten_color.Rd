@@ -31,5 +31,5 @@ lighten_color(c("green4", 8, 1, "black", "#6464FF", "blue"))
 \code{\link{rgb}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

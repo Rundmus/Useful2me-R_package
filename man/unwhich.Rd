@@ -23,5 +23,5 @@ unwhich(c(5, 10), 10)
 
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

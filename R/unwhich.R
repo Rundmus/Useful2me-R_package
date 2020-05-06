@@ -11,7 +11,7 @@
 #' @examples
 #' unwhich(c(5, 10), 10)
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2017-09-15 by Mun-Gwan

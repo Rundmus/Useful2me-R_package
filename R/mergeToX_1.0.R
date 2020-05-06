@@ -22,7 +22,7 @@
 #' rownames(tg1)
 #' mergeToX(tg1, tg2, by= rownames)
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{merge}}
 # -----------------------------------------------------------------------------#
 #' @export

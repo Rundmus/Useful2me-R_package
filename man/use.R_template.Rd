@@ -4,21 +4,23 @@
 \alias{use.R_template}
 \title{Use .R template}
 \usage{
-use.R_template(file, title = sub("\\\\.R$", "", basename(file)),
-  author = "Mun-Gwan", date = Sys.Date(), wddir = getwd())
+use.R_template(
+  file,
+  author,
+  title = sub("\\\\.R$", "", basename(file)),
+  date = Sys.Date()
+)
 }
 \arguments{
 \item{file}{The name of the generating .R file. The ".R" extension will be
 added if it is missing.}
 
+\item{author}{The author of the script}
+
 \item{title}{The title of the generating R script, which is displayed at the
 top}
 
-\item{author}{The author of the script}
-
 \item{date}{The date written as the creation date}
-
-\item{wddir}{The directory on which the R script should be run.}
 }
 \description{
 Create .R file using a template that includes header lines
@@ -30,5 +32,5 @@ use.R_template("process_data")
 
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

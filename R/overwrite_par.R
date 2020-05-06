@@ -15,7 +15,7 @@
 #' new_par <- list(col= "green", main= "Hello")
 #' overwrite_par(prev_par, new_par)
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @export
 # -----------------------------------------------------------------------------#
 # created  : 2011-09-13 by Mun-Gwan

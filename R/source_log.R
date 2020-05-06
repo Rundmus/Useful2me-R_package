@@ -9,8 +9,9 @@
 #' 
 #' @param file the name of R file to be run 
 #' @param echo same as 'echo' in \code{\link{source}}
+#' @param path log output directory relative to the R script
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{source}}
 #' 
 #' @export
@@ -26,16 +27,17 @@
 #   2018-05-21 by Mun-Gwan : 
 #     1) fix path for the case 'wd' has been changed within R script
 #     2) change the date in the log file name that fits to UNIX format
+#   2020-05-06 by Mun-Gwan : name change to '.source'
 # -----------------------------------------------------------------------------#
 
-source_log <- function(file, echo= F) {
+.source <- function(file, echo= F, path = "../log") {
   Rscript <- readLines(file)
   
   fDir <- dirname(file)
   # make it absolute file path
   if(!grepl("^/", fDir)) fDir <- file.path(getwd(), fDir)
   
-  logDir <- file.path(fDir, "../log")    # default log directory
+  logDir <- file.path(fDir, path)    # log output directory
   if(! file.exists(logDir)) logDir <- fDir
   
   # Find the name of log file

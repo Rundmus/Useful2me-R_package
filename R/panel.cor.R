@@ -10,7 +10,7 @@
 #' @param cex.cor the magnification factor for correlation values
 #' @param ... not used
 #' 
-#' @author Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+#' @author Mun-Gwan Hong, \email{mungwan@gmail.com}
 #' @seealso \code{\link{pairs}}
 #' @export
 # -----------------------------------------------------------------------------#

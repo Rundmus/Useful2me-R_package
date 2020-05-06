@@ -4,8 +4,12 @@
 \alias{ask_save}
 \title{Ask first and save}
 \usage{
-ask_save(..., list = character(), file = stop("'file' must be specified"),
-  yes = FALSE)
+ask_save(
+  ...,
+  list = character(),
+  file = stop("'file' must be specified"),
+  yes = FALSE
+)
 }
 \arguments{
 \item{..., list, file}{Please refer to the description in \code{\link{save}}}
@@ -21,5 +25,5 @@ action in a script.
 \code{\link{save}}
 }
 \author{
-Mun-Gwan Hong, \email{mun-gwan.hong@scilifelab.se}
+Mun-Gwan Hong, \email{mungwan@gmail.com}
 }

@@ -1,14 +1,14 @@
-#' Useful4me : A package of useful functions for me
+#' Useful2me : A package of useful functions to me
 #' 
-#' This package includes the functions simplifying works here and there 
+#' This package includes functions that simplify works here and there 
 #' 
-#' @author Mun-Gwan Hong <\email{mun-gwan.hong@scilifelab.se}>
+#' @author Mun-Gwan Hong <\email{mungwan@gmail.com}>
 #' @keywords package
 #' 
 #' @docType package
 #' 
-#' @name Useful4me-package
-#' @import dplyr
+#' @name Useful2me-package
+#' @import tidyverse
 #' 
 NULL
 
