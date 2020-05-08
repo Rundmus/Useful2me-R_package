@@ -1,0 +1,69 @@
+---
+title: "{{{ title }}}"
+author: "{{{ author }}}"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+output: 
+  html_document:
+    theme: readable
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    fig_caption: true
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../intermediate/rmd") })
+---
+
+<style>
+p.caption {
+  font-size: 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, results='asis')
+
+library(tidyverse)
+library(Useful2me)  # remotes::install_github("Rundmus/Useful2me-R_package", upgrade= "never")
+library(knitr)
+library(kableExtra)
+library(janitor)     # tabyl, fisher.test
+
+rm(list = ls())
+```
+
+```{r filenames}
+###  File names
+
+fn <- list(
+	i = list(                               #  input
+	)
+)
+
+#  Check all exists
+stopifnot(all(file.exists(c('.', unlist(fn$i)))))
+```
+
+
+```{r load}
+
+```
+
+
+
+----------------------------
+
+##  Background
+
+###  Study design
+
+
+###  Data
+
+
+###  Notes
+
+----------------------------
+
+##  Analysis
+
