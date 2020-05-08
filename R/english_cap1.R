@@ -17,7 +17,7 @@
 #' @rdname english_cap1
 # -----------------------------------------------------------------------------#
 english_cap1 <- function(x, Zero = 'No') {
-  x <- english(x)
+  x <- english::english(x)
   paste0(
     toupper(substr(x, 1, 1)),
     substring(x, 2)
@@ -31,10 +31,10 @@ english_cap1 <- function(x, Zero = 'No') {
 #' @export
 #'
 #' @examples
-#' english.(c(1, 2))
+#' english(c(1, 2))
 #' @rdname english_cap1
 # -----------------------------------------------------------------------------#
 
-english_ <- function(x) {
+english <- function(x) {
   as.character(english::english(x))
 }
