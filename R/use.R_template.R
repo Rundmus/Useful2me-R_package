@@ -10,7 +10,7 @@ use.template <- function(file,
   
   #  template_path = path to the template file
   template_path <- system.file(
-    "templates", "template_file", 
+    "templates", template_file, 
     package= "Useful2me", 
     mustWork= TRUE
   )
