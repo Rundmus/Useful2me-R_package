@@ -3,6 +3,8 @@
 #'
 #' Read number in English and capitalize the first letter
 #' \code{english_} fix the problem of showing digits in Rmd.
+#' 
+#' @name english_cap1
 #'
 #' @param x an integer vector
 #' @param Zero how to read 0

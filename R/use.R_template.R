@@ -93,7 +93,7 @@ use.Rmd_template <- function(file, author) {
     file = file,
     author = author,
     extension = ".Rmd",
-    template_file= "dot_Rmd_template.R"
+    template_file= "dot_Rmd_template.Rmd"
   )
 }
 
