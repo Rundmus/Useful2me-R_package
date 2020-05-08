@@ -2,12 +2,12 @@
 % Please edit documentation in R/english_cap1.R
 \name{english_cap1}
 \alias{english_cap1}
-\alias{english_}
+\alias{english}
 \title{English and Capitalize 1}
 \usage{
 english_cap1(x, Zero = "No")
 
-english_(x)
+english(x)
 }
 \arguments{
 \item{x}{an integer vector}
@@ -23,5 +23,5 @@ Read number in English and capitalize the first letter
 }
 \examples{
 english_cap1(c(1, 2))
-english.(c(1, 2))
+english(c(1, 2))
 }
