@@ -44,7 +44,6 @@ fn <- list(
 stopifnot(all(file.exists(c('.', unlist(fn$i)))))
 ```
 
-
 ```{r load}
 
 ```
