@@ -21,13 +21,17 @@ p.caption {
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, results='asis')
+knitr::opts_chunk$set(
+	echo = F,
+	# fig.path = '../intermediate/rmd/figure/',  # save figure in files
+	results = 'asis'
+)
 
 library(tidyverse)
 library(Useful2me)  # remotes::install_github("Rundmus/Useful2me-R_package", upgrade= "never")
 library(knitr)
-library(kableExtra)
-library(janitor)     # tabyl, fisher.test
+# library(kableExtra)     # kable_styling
+# library(janitor)     # tabyl, fisher.test
 
 rm(list = ls())
 ```
