@@ -26,10 +26,21 @@ use.template <- function(file,
     gsub('\\{\\{\\{ author \\}\\}\\}', author, .) %>% 
     gsub('\\{\\{\\{ date \\}\\}\\}', as.character(date), .) 
   
-  ##  allow both with or without .R in 'file'
+  ##  allow both with or without extension in 'file'
   base_fn <- sub(ext_pattern, "", basename(file))
   path <- file.path(dirname(file), paste0(base_fn, extension))
   
+  #  when the file already exists
+  if(file.exists(path)) {
+    answer <- readline(
+      paste0('# The file \"', base_fn, extension, '\" already exists. Overwrite? ')
+    )
+    if(!tolower(answer) %in% c("y", "yes")) {
+      message('# No change.')
+      return(invisible(TRUE))
+    }
+  }
+
   #  **  Write the text from the template after modification  **  #
   writeLines(out_text, path)
   
