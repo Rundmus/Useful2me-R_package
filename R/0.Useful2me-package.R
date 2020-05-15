@@ -14,5 +14,9 @@
 NULL
 
 
+.onAttach <- function(libname, pkgname){
+  #  ref: https://stackoverflow.com/questions/41372146/test-interaction-with-users-in-r-package
+  options(mypkg.connection = stdin())
+}
 
 # GLOBAL CONSTANTS

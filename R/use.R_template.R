@@ -28,14 +28,17 @@ use.template <- function(file,
   
   ##  allow both with or without extension in 'file'
   base_fn <- sub(ext_pattern, "", basename(file))
-  path <- file.path(dirname(file), paste0(base_fn, extension))
+  base_fn.ext <- paste0(base_fn, extension)
+  path <- file.path(dirname(file), base_fn.ext)
   
   #  when the file already exists
   if(file.exists(path)) {
-    answer <- readline(
-      paste0('# The file \"', base_fn, extension, '\" already exists. Overwrite? ')
-    )
-    if(!tolower(answer) %in% c("y", "yes")) {
+    cat('# The file \"', base_fn.ext, '\" already exists. Overwrite (y/n)? ', sep= "")
+    #  ref: https://stackoverflow.com/questions/41372146/test-interaction-with-users-in-r-package
+    ans <- readLines(con = getOption("mypkg.connection"), n= 1)
+    cat("\n")
+    
+    if(tolower(ans) != "y") {
       message('# No change.')
       return(invisible(TRUE))
     }
@@ -44,9 +47,9 @@ use.template <- function(file,
   #  **  Write the text from the template after modification  **  #
   writeLines(out_text, path)
   
-  message('# The file \"', paste0(base_fn, extension), '\" has been created.')
+  message('# The file \"', base_fn.ext, '\" has been created.')
   
-  invisible(TRUE)
+  invisible(path)
 }
 
 
