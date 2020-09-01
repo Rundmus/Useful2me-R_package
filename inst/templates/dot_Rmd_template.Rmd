@@ -23,6 +23,7 @@ p.caption {
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
 	echo = F,
+	# dev = c('png', 'pdf'),   # save figures in two formats
 	# fig.path = '../intermediate/rmd/figure/',  # save figure in files
 	results = 'asis'
 )
