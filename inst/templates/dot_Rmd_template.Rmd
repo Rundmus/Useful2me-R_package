@@ -73,3 +73,6 @@ stopifnot(all(file.exists(c('.', unlist(fn$i)))))
 
 ##  Analysis
 
+```{r sessionInfo, results='markup'}
+sessionInfo()
+```
