@@ -30,7 +30,7 @@
 #   2020-05-06 by Mun-Gwan : name change to '.source'
 # -----------------------------------------------------------------------------#
 
-.source <- function(file, echo= F, path = "../log") {
+.source <- function(file, echo= F, path = "../logs") {
   Rscript <- readLines(file)
   
   fDir <- dirname(file)
