@@ -1,6 +1,6 @@
 Package: Useful2me
-Version: 0.1
-Date: 2020-05-06
+Version: 0.11
+Date: 2020-11-10
 Title: R function collection useful to me
 Author@R: c(person("Mun-Gwan", "Developer", email= "mungwan@gmail.com"))
 Author: Mun-Gwan Hong
@@ -9,7 +9,6 @@ Imports:
 	dplyr,
 	ggplot2,
   scales,
-	readxl,
   english
 Description: A collection of R functions that are useful to me, and potentially useful to you.
 License: MIT-license

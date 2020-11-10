@@ -16,8 +16,9 @@
 enum_vars <- function(x,
                       surround = '`',
                       with_oxford_comma = FALSE) {
-  if(length(x) <= 1) return(x)
   x <- paste0(surround, x, surround)
+  if(length(x) <= 1) return(x)
+  
   i_last <- length(x)
   
   paste(
