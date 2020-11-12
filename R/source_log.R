@@ -52,23 +52,22 @@
     paste0(., "--", format(Sys.Date(), "%Y%m%d"), ".log") %>%  # add date and ".log"
     file.path(logDir, .)
   
-  loadedPackages <- 
-    c(
-      #  Find the version of loaded packages by 'library' or 'require'
-      Rscript[grep("^[[:blank:]]*(library|require)\\(\\w*\\)", Rscript)] %>% 
-        sub("^[[:blank:]]*(library|require)\\((\\w*)\\).*$", "\\2", .),
-      #  Find the version of loaded packages by function direct access
-      Rscript[grep("[\\:]{2,3}[[:alpha:]\\._]", Rscript)] %>% 
-        strsplit("[\\:]{2,3}") %>%      #  multiple occasions of ::
-        { 
-          if(length(.) == 0) NULL 
-          else {
-            .[[1]][ -length(.[[1]]) ] %>%     #   remove the last text
-              paste(" ", .) %>%       # for the case no character ahead of package name
-              sub("^.*[[:punct:] ]([[:alnum:]]+)", "\\1", .)
-          }
-        }
-    ) %>% 
+  
+  tmp <- Rscript %>% 
+    sub("#.*", "", .)   # remove text after the comment mark '#'
+
+  loadedPackages <- c(
+    #  Find the version of loaded packages by 'library' or 'require'
+    tmp[grep("\\<(library|require)\\(\\w*\\)", tmp)] %>% 
+      regmatches(., regexpr("(library|require)\\(\\w*", .)) %>% 
+      sub("(library|require)\\(", "", .),
+    #  Find the version of loaded packages by function direct access
+    tmp[grep("[\\:]{2,3}[[:alpha:]\\._]", tmp)] %>%  #  lines with ::
+      strsplit("[\\:]{2,3}") %>%       #  multiple occasions of ::
+      lapply(function(x) x[ -length(x) ]) %>%       #   remove the last text
+      unlist() %>% 
+      regmatches(., regexpr("[[:alnum:]]+$", .))
+  ) %>% 
     unique()
   
   #  package versions
