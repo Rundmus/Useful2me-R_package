@@ -28,6 +28,8 @@
 #     1) fix path for the case 'wd' has been changed within R script
 #     2) change the date in the log file name that fits to UNIX format
 #   2020-05-06 by Mun-Gwan : name change to '.source'
+#   2020-11-12 by Mun-Gwan : include the packages in which a function was 
+#     directly accessed.
 # -----------------------------------------------------------------------------#
 
 .source <- function(file, echo= F, path = "../logs") {
@@ -50,23 +52,35 @@
     paste0(., "--", format(Sys.Date(), "%Y%m%d"), ".log") %>%  # add date and ".log"
     file.path(logDir, .)
   
-  ##  Find the version of loaded packages
   loadedPackages <- 
-    Rscript %>% 
-    grep("^[[:blank:]]*(library|require)\\(\\w*\\)", .) %>% 
-    {
-      if(length(.) > 0) {
-        Rscript[.] %>% 
-          sub("^[[:blank:]]*(library|require)\\((\\w*)\\).*$", "\\2", .) %>% 
-          sapply(., function(ea) paste0(ea, "-", utils::packageVersion(ea)))
-      } else NULL
-    }
+    c(
+      #  Find the version of loaded packages by 'library' or 'require'
+      Rscript[grep("^[[:blank:]]*(library|require)\\(\\w*\\)", Rscript)] %>% 
+        sub("^[[:blank:]]*(library|require)\\((\\w*)\\).*$", "\\2", .),
+      #  Find the version of loaded packages by function direct access
+      Rscript[grep("[\\:]{2,3}[[:alpha:]\\._]", Rscript)] %>% 
+        strsplit("[\\:]{2,3}") %>%      #  multiple occasions of ::
+        { 
+          if(length(.) == 0) NULL 
+          else {
+            .[[1]][ -length(.[[1]]) ] %>%     #   remove the last text
+              paste(" ", .) %>%       # for the case no character ahead of package name
+              sub("^.*[[:punct:] ]([[:alnum:]]+)", "\\1", .)
+          }
+        }
+    ) %>% 
+    unique()
+  
+  #  package versions
+  loadedPackages <- loadedPackages %>% 
+    sapply(., function(ea) paste0(ea, "-", utils::packageVersion(ea)))
+
   
   ##  processing time
   ptm <- proc.time()
   utils::capture.output(
     cat("Date :", as.character(Sys.time()), "\n*", R.version.string, "\n"),
-    if (is.null(loadedPackages))
+    if (length(loadedPackages) == 0)
       cat("\n")
     else
       cat("*", paste(loadedPackages, sep = ", "), "\n\n"),

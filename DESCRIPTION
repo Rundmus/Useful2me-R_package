@@ -1,6 +1,6 @@
 Package: Useful2me
-Version: 0.11
-Date: 2020-11-10
+Version: 0.12
+Date: 2020-11-12
 Title: R function collection useful to me
 Author@R: c(person("Mun-Gwan", "Developer", email= "mungwan@gmail.com"))
 Author: Mun-Gwan Hong
